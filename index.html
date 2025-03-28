@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bild generieren</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <!-- Links angepasst für GitHub Pages (relative Pfade) -->
+            <li><a href="index.html">Bild generieren</a></li>
+            <li><a href="image_with_image.html">Bild mit Bild</a></li>
+            <li><a href="settings.html">Einstellungen</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <!-- Inhalt von index.html -->
+        <h1>Neues Bild erfinden! ✨</h1>
+        <p>Sag mir, was ich malen soll:</p>
+
+        <div class="input-area">
+            <textarea id="text-prompt" rows="3" placeholder="z.B. Ein süßer Hund mit einem roten Hut"></textarea>
+            <button id="speech-button" class="speech-btn" title="Spracheingabe starten">🎤</button>
+        </div>
+
+        <button id="generate-text-button" class="action-button">Bild malen lassen!</button>
+
+        <div id="status-area" class="status" style="display: none;"></div>
+        <div id="result-area" class="result-image" style="display: none;">
+            <img id="generated-image" src="" alt="Generiertes Bild erscheint hier">
+        </div>
+         <!-- Ende Inhalt von index.html -->
+    </main>
+    <footer>
+        <p>Gemini Bild App</p>
+    </footer>
+    <!-- JavaScript am Ende laden -->
+    <script src="static/js/script.js" defer></script>
+</body>
+</html>
