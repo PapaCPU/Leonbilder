@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einstellungen</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+             <!-- Links angepasst für GitHub Pages (relative Pfade) -->
+             <li><a href="index.html">Bild generieren</a></li>
+             <li><a href="image_with_image.html">Bild mit Bild</a></li>
+             <li><a href="settings.html">Einstellungen</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <!-- Inhalt von settings.html -->
+        <h1>Einstellungen ⚙️</h1>
+
+        <div class="setting">
+            <label for="api-key">Google API Schlüssel:</label>
+            <input type="password" id="api-key" placeholder="Füge hier deinen API Schlüssel ein">
+            <button id="save-api-key" class="action-button small">Speichern</button>
+            <p class="info">
+                Dein Schlüssel wird nur in deinem Browser gespeichert (LocalStorage).
+                <strong style="color: red;">WARNUNG:</strong> Dies ist nicht sicher! Jeder mit Zugriff auf diesen Browser kann den Schlüssel sehen.
+            </p>
+        </div>
+         <div class="setting">
+            <h2>Referenzbilder</h2>
+            <p class="info">
+                Die Referenzbilder (Mama, Papa, Leon) müssen im Ordner <code>reference_images</code> im selben Verzeichnis wie die HTML-Dateien auf GitHub liegen.
+                Stelle sicher, dass die Dateinamen und Pfade in <code>image_with_image.html</code> korrekt sind (z.B. <code>reference_images/papa.jpeg</code>).
+            </p>
+         </div>
+
+        <div id="settings-status" class="status" style="display: none;"></div>
+        <!-- Ende Inhalt von settings.html -->
+    </main>
+    <footer>
+        <p>Gemini Bild App</p>
+    </footer>
+    <!-- JavaScript am Ende laden -->
+    <script src="static/js/script.js" defer></script>
+</body>
+</html>
