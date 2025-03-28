@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bild mit Bild</title>
+     <link rel="stylesheet" href="static/css/style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+             <!-- Links angepasst für GitHub Pages (relative Pfade) -->
+             <li><a href="index.html">Bild generieren</a></li>
+             <li><a href="image_with_image.html">Bild mit Bild</a></li>
+             <li><a href="settings.html">Einstellungen</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <!-- Inhalt von image_with_image.html -->
+        <h1>Bild verändern! 🎨</h1>
+
+        <p>Wen möchtest du verändern?</p>
+        <div class="reference-selector">
+            <!-- WICHTIG: data-path muss der korrekte relative Pfad zum Bild sein! -->
+            <button class="ref-button" data-ref="mama" data-path="reference_images/mama.jpg">Mama</button>
+            <button class="ref-button" data-ref="papa" data-path="reference_images/papa.jpeg">Papa</button>
+            <button class="ref-button" data-ref="leon" data-path="reference_images/leon.png">Leon</button>
+            <button class="ref-button" data-ref="familie" data-path="reference_images/papa.jpeg">Familie</button> <!-- Familie nutzt Papa als Basis -->
+            <span id="selected-ref-display" style="margin-left: 15px; font-style: italic;"></span>
+        </div>
+
+        <p>Was soll ich mit dem Bild machen?</p>
+        <div class="input-area">
+            <textarea id="image-prompt" rows="3" placeholder="z.B. Zieh die Person als Astronaut an"></textarea>
+            <button id="speech-button" class="speech-btn" title="Spracheingabe starten">🎤</button>
+        </div>
+
+        <input type="hidden" id="selected-reference-id" value="">
+        <input type="hidden" id="selected-reference-path" value=""> <!-- Pfad zum Bild speichern -->
+        <button id="generate-image-button" class="action-button" disabled>Bild verändern!</button>
+
+        <div id="status-area" class="status" style="display: none;"></div>
+        <div id="result-area" class="result-image" style="display: none;">
+            <img id="generated-image" src="" alt="Verändertes Bild erscheint hier">
+        </div>
+        <!-- Ende Inhalt von image_with_image.html -->
+    </main>
+    <footer>
+        <p>Gemini Bild App</p>
+    </footer>
+    <!-- JavaScript am Ende laden -->
+    <script src="static/js/script.js" defer></script>
+</body>
+</html>
